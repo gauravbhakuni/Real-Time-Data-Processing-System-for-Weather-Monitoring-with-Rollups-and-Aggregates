@@ -1,0 +1,5 @@
+# API keys or config files
+config.js
+
+# Environment variables
+.env

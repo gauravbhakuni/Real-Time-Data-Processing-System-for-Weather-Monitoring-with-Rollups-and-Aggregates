@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+
+    <div class="containerr">
+        <!-- Top (Fixed) -->
+        <div class="top">
+            <div class="city" onclick="fetchWeather('Delhi')">Delhi</div>
+            <div class="city" onclick="fetchWeather('Mumbai')">Mumbai</div>
+            <div class="city" onclick="fetchWeather('Chennai')">Chennai</div>
+            <div class="city" onclick="fetchWeather('Bangalore')">Bangalore</div>
+            <div class="city" onclick="fetchWeather('Kolkata')">Kolkata</div>
+        </div>
+
+        <!-- bottom (Scrollable) -->
+        <div class="bottom">
+            <div class="container">
+                <div class="weather__body">
+                    <h1 class="weather__city"></h1>
+
+                    <div class="weather__datetime">
+                        <p></p>
+                    </div>
+
+                    <div class="weather__forecast">
+                        <p></p>
+                    </div>
+
+                    <div class="weather__icon">
+                        <img src="https://openweathermap.org/img/wn/10d@4x.png" />
+                    </div>
+
+                    <p class="weather__temperature"></p>
+
+                    <div class="weather__minmax">
+                        <p></p>
+                        <p></p>
+                    </div>
+
+                    <div class="weather__info">
+
+                        <div class="weather__card">
+                            <i class="fa-solid fa-temperature-full"></i>
+                            <div>
+                                <p>Real Feel</p>
+                                <p class="weather__realfeel"></p>
+                            </div>
+                        </div>
+
+                        <div class="weather__card">
+                            <i class="fa-solid fa-droplet"></i>
+                            <div>
+                                <p>Humidity</p>
+                                <p class="weather__humidity"></p>
+                            </div>
+                        </div>
+
+                        <div class="weather__card">
+                            <i class="fa-solid fa-wind"></i>
+                            <div>
+                                <p>Wind</p>
+                                <p class="weather__wind"></p>
+                            </div>
+                        </div>
+
+                        <div class="weather__card">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <div>
+                                <p>Pressure</p>
+                                <p class="weather__pressure"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="daily-summary">
+                    <!-- Daily summary for weather will be displayed here -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
