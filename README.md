@@ -69,10 +69,10 @@ The project uses the [OpenWeatherMap API](https://openweathermap.org/api) to fet
 
 ## Screenshots
 
-![Weather Dashboard](screenshot1.png)
+![Weather Dashboard](assets/image1.png)
 *Real-time weather dashboard with data for selected cities.*
 
-![Daily Summary](screenshot2.png)
+![Daily Summary](assets/image2.png)
 *Daily summary of weather data, showing average, max, and min temperatures.*
 
 ## Contributing
