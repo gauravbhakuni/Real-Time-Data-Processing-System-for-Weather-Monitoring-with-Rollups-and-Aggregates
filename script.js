@@ -13,7 +13,7 @@ let weather__humidity = document.querySelector(".weather__humidity")
 let weather__wind = document.querySelector(".weather__wind")
 let weather__pressure = document.querySelector(".weather__pressure")
 
-function fetchWeather(city) {
+export function fetchWeather(city) {
   console.log(`Fetching weather for ${city}`); // Debugging log
   currCity = city;
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
@@ -161,4 +161,4 @@ function kelvinToCelsius(kelvin) {
 document.body.addEventListener("load", fetchWeather(currCity));
 setInterval(() => {
   fetchWeather(currCity);
-}, 10000);
+}, 3000000);

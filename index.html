@@ -13,14 +13,14 @@
     <div class="containerr">
         <!-- Top (Fixed) -->
         <div class="top">
-            <div class="city" onclick="fetchWeather('Delhi')">Delhi</div>
-            <div class="city" onclick="fetchWeather('Mumbai')">Mumbai</div>
-            <div class="city" onclick="fetchWeather('Chennai')">Chennai</div>
-            <div class="city" onclick="fetchWeather('Bangalore')">Bangalore</div>
-            <div class="city" onclick="fetchWeather('Kolkata')">Kolkata</div>
+            <div class="city" data-city="Delhi">Delhi</div>
+            <div class="city" data-city="Mumbai">Mumbai</div>
+            <div class="city" data-city="Chennai">Chennai</div>
+            <div class="city" data-city="Bangalore">Bangalore</div>
+            <div class="city" data-city="Kolkata">Kolkata</div>
         </div>
 
-        <!-- bottom (Scrollable) -->
+        <!-- Bottom (Scrollable) -->
         <div class="bottom">
             <div class="container">
                 <div class="weather__body">
@@ -84,11 +84,29 @@
                     <!-- Daily summary for weather will be displayed here -->
                 </div>
             </div>
-
         </div>
     </div>
 
-    <script type="module" src="script.js"></script>
+    <!-- ES module script -->
+    <script type="module">
+        import { fetchWeather } from './script.js';
+
+        // Get all city elements
+        const cityElements = document.querySelectorAll('.city');
+
+        // Add click event listeners to fetch weather for the clicked city
+        cityElements.forEach(cityElement => {
+            cityElement.addEventListener('click', () => {
+                const city = cityElement.getAttribute('data-city');
+                fetchWeather(city); // Fetch weather for selected city
+            });
+        });
+
+        // Automatically load weather for a default city (Delhi) on page load
+        window.addEventListener('load', () => {
+            fetchWeather('Delhi'); // Fetch weather for Delhi on page load
+        });
+    </script>
 
 </body>
 
