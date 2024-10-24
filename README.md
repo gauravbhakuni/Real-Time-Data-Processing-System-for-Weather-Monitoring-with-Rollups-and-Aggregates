@@ -107,4 +107,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For any questions or feedback, feel free to reach out to:
 
 - **Gaurav Bhakuni**
-- [LinkedIn]([https://www.linkedin.com/in/gaurav-bhakuni/](https://www.linkedin.com/in/gaurav-singh-bhakuni-gsb123/))
+- https://www.linkedin.com/in/gaurav-singh-bhakuni-gsb123/
